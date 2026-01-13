@@ -37,8 +37,6 @@ class TestExampleFunction:
             ("", 1, "Hello, !"),
         ],
     )
-    def test_parametrized_greetings(
-        self, name: str, count: int, expected: str
-    ) -> None:
+    def test_parametrized_greetings(self, name: str, count: int, expected: str) -> None:
         """Test various greeting combinations."""
         assert example_function(name, count=count) == expected
