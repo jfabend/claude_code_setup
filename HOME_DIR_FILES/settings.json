@@ -24,8 +24,17 @@
   },
   "model": "opus",
   "hooks": {
-    "Notification": [],
-    "PreToolUse": []
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|mcp__DevTools__insert_after_symbol|mcp__DevTools__insert_before_symbol|mcp__DevTools__replace_symbol_body",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input?.filePath // .tool_input?.file_path // error(\"Missing filePath or file_path in tool_input\")' | xargs bun run lint --fix --max-warnings=0 --no-warn-ignored 1>&2 || exit 2"
+          }
+        ]
+      }
+    ]
   },
   "statusLine": {
     "type": "command",
