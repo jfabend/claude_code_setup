@@ -10,7 +10,8 @@
       "Bash(uv run mypy:*)",
       "Bash(uv run:*)",
       "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" status)",
-      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" diff)"
+      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" diff)",
+      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" diff .github/workflows/ci.yml)"
     ]
   }
 }
