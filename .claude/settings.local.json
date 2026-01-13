@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" remote:*)",
+      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" log --oneline -5)",
+      "Bash(dir:*)",
+      "Bash(uv --version:*)",
+      "Bash(uv run pytest:*)",
+      "Bash(uv run ruff:*)",
+      "Bash(uv run mypy:*)",
+      "Bash(uv run:*)",
+      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" status)",
+      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" diff)"
+    ]
+  }
+}
