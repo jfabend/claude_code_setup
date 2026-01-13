@@ -11,7 +11,12 @@
       "Bash(uv run mypy:*)",
       "Bash(uv run:*)",
       "Bash(git status)",
-      "Bash(git diff:*)"
+      "Bash(git diff:*)",
+      "Bash(git -C \"/c/Users/jonat/OneDrive/Agents/Claude/claude_code_setup\" log --oneline -20)",
+      "Bash(git -C \"/c/Users/jonat/OneDrive/Agents/Claude/claude_code_setup\" show fed297e --stat)",
+      "Bash(git -C \"/c/Users/jonat/OneDrive/Agents/Claude/claude_code_setup\" show fed297e)",
+      "Bash(git -C \"/c/Users/jonat/OneDrive/Agents/Claude/claude_code_setup\" show a82fd18 --stat)",
+      "Bash(git -C \"/c/Users/jonat/OneDrive/Agents/Claude/claude_code_setup\" log --oneline --all)"
     ]
   }
 }
