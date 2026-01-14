@@ -8,7 +8,20 @@
       "WebFetch",
       "Bash(gh run list:*)",
       "Bash(gh run view:*)",
-      "Bash(jq:*)"
+      "Bash(jq:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git checkout:*)",
+      "Bash(git branch:*)",
+      "Bash(git show:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git -C:*)"
     ],
     "deny": [
       "Bash(rm -rf:*)",
