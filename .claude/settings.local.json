@@ -17,7 +17,8 @@
       "Bash(git -C \"/c/Users/jonat/OneDrive/Agents/Claude/claude_code_setup\" show fed297e)",
       "Bash(git -C \"/c/Users/jonat/OneDrive/Agents/Claude/claude_code_setup\" show a82fd18 --stat)",
       "Bash(git -C \"/c/Users/jonat/OneDrive/Agents/Claude/claude_code_setup\" log --oneline --all)",
-      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" log --oneline -10)"
+      "Bash(git -C \"C:\\\\Users\\\\jonat\\\\OneDrive\\\\Agents\\\\Claude\\\\claude_code_setup\" log --oneline -10)",
+      "Bash(gh repo view:*)"
     ]
   }
 }
