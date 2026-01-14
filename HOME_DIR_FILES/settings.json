@@ -24,17 +24,7 @@
   },
   "model": "opus",
   "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Bash",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "powershell -ExecutionPolicy Bypass -File \"$env:USERPROFILE\\.claude\\hooks\\block_heredoc.ps1\""
-          }
-        ]
-      }
-    ],
+    "PreToolUse": [],
     "PostToolUse": [
       {
         "matcher": "Write|Edit|mcp__DevTools__insert_after_symbol|mcp__DevTools__insert_before_symbol|mcp__DevTools__replace_symbol_body",
