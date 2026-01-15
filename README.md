@@ -23,17 +23,27 @@ A Claude Code orchestration framework with specialized AI agents, GitHub integra
 - GitHub integration commands (PR creation, issue solving)
 - Project context maintenance skill for agents
 
-## Before you start, please note:
+## Before you start, please read these general instructions:
 - Global guidelines for Claude Code
-    - You can provide Claude Code with global project-agnostic guidelines
+    - You can provide Claude Code with **global project-agnostic guidelines**
     - In this example, this global CLAUDE.md contains guidelines how it should organize and orchestrate itself
     - To provide your local Claude Code with those guidelines, all the files from the folder HOME_DIR_FILES must be copied to your home directory
     - On macOS, that would be ~/.claude
     - On Windows, it's C:\Users\<your-username>\.claude
-- Project-specific guidelines for Claude Code live inside the CLAUDE.md in this repository.
-- In .claude/agents you can see how you can set up individual agents, which Claude Code can spawn if necessary.
-- In .claude/skills you can see how to set up skills which the agents can use.
-- In .claude/commands you set up your own slash commands which YOU as user can use via the Claude Code CLI to run repetitive workflows.
+- **Project-specific guidelines** for Claude Code live inside the CLAUDE.md in this repository.
+- In **.claude/agents** you can see how you can set up individual agents, which Claude Code can spawn if necessary.
+- In **.claude/skills** you can see how to set up skills which the agents can use.
+- In **.claude/commands** you set up your own slash commands which YOU as user can use via the Claude Code CLI to run repetitive workflows.
+    - Before starting slash commands, evaluate whether you want to run them in plan mode or act mode.
+- Important configurations in *settings.json*
+    - You can set up global project-agnostic settings.json in your home directory (like described above)
+    - And you can set up project-specific settings.json in this project repo (.claude/settings.json)
+    - **Permissions**: Configure what kind of bash commands Claude Code is allowed to run
+    - **Default Mode**: Define the default mode (plan or act) which will be selected when starting the Claude Code CLI
+    - **Hooks**:
+        - Hooks are extremely important for Claude Code
+        - With hooks, you can provide Claude Code with automated feedback right after its actions / tool use (e.g., linting or testing right after writing code).
+        - Hooks can also be used to enforce a certain behavior while starting Claude Code or when Claude Code thinks it has completed the task.
 
 ## AI Agents
 
