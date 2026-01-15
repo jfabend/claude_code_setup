@@ -35,6 +35,7 @@ A Claude Code orchestration framework with specialized AI agents, GitHub integra
 - In **.claude/skills** you can see how to set up skills which the agents can use.
 - In **.claude/commands** you set up your own slash commands which YOU as user can use via the Claude Code CLI to run repetitive workflows.
     - Before starting slash commands, evaluate whether you want to run them in plan mode or act mode.
+    - You can e.g. run /plan-to-issues to let Claude Code create several Github issues and epics based on a plan file it has created.
 - Important configurations in *settings.json*
     - You can set up global project-agnostic settings.json in your home directory (like described above)
     - And you can set up project-specific settings.json in this project repo (.claude/settings.json)
@@ -44,6 +45,7 @@ A Claude Code orchestration framework with specialized AI agents, GitHub integra
         - Hooks are extremely important for Claude Code
         - With hooks, you can provide Claude Code with automated feedback right after its actions / tool use (e.g., linting or testing right after writing code).
         - Hooks can also be used to enforce a certain behavior while starting Claude Code or when Claude Code thinks it has completed the task.
+- To provide Claude Code with the **Specs** of the solution you would like to build, fill out SPEC.md
 
 ## AI Agents
 
