@@ -91,12 +91,12 @@ Display the PR information in a clear format:
 Check the PR state:
 
 If state is `MERGED`:
-- Display: "Notice: This PR has already been merged. Review is informational only - no review can be submitted."
-- Continue with review but skip submission step
+- Display: "Error: This PR has already been merged. Review is informational only - no review can be submitted."
+- Stop execution
 
 If state is `CLOSED`:
-- Display: "Notice: This PR has been closed without merging. Review is informational only - no review can be submitted."
-- Continue with review but skip submission step
+- Display: "Error: This PR has been closed without merging. Review is informational only - no review can be submitted."
+- Stop execution
 
 ## Step 5: Check CI Status
 
@@ -203,6 +203,8 @@ Check for:
 ### 8.2 Potential Bugs and Anti-patterns
 
 Look for:
+- Is the code correct?
+- Does it solve what it is meant for?
 - Null/undefined reference risks
 - Resource leaks (unclosed files, connections)
 - Race conditions in async code
