@@ -1,9 +1,36 @@
 ## Project Overview
 
- - Currently: Python project template for Claude Code projects
+ - Claude Code orchestration framework with specialized agents, commands, and skills
  - Uses src-layout pattern (src/claude_code_setup/)
  - Tests live in tests/unit/, tests/integration/, tests/e2e/
- - After cloning and adjusting this repo, please describe repo structure here
+
+## Available Agents
+
+ - `implementer` - Writes production code following SOLID principles
+ - `architect` - Designs system architecture and ADRs
+ - `test-writer` - Creates tests using TDD approach
+ - `code-reviewer` - Reviews PRs and code quality
+ - `debugger` - Debugs issues and fixes bugs
+ - `api-designer` - Designs API interfaces
+ - `docs-writer` - Writes documentation
+ - `refactorer` - Improves code structure
+ - `code-simplifier` - Simplifies complex code
+ - `project-librarian` - Manages project knowledge
+ - `cloud-platform-architect` - Designs cloud architecture
+ - `database-specialist` - Designs databases
+
+## Available Commands
+
+ Commands are located in `.claude/commands/`:
+ - `create-pr` - Creates GitHub PRs with auto-generated title/body
+ - `solve-issue` - Fetches and solves GitHub issues with TDD
+ - `plan-to-issues` - Converts plan files to GitHub issues (epic + sub-issues)
+ - `review-pr` - Reviews GitHub pull requests
+
+## Skills
+
+ Skills are located in `.claude/skills/`:
+ - `maintaining-project-context` - Updates CLAUDE.md/AGENTS.md when code contracts change
 
 ## Key Commands
 

@@ -7,7 +7,7 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 
-A starting point for Claude Code projects with modern Python tooling.
+A Claude Code orchestration framework with specialized AI agents, GitHub integration, and modern Python tooling for building robust software projects.
 
 ## Features
 
@@ -19,6 +19,51 @@ A starting point for Claude Code projects with modern Python tooling.
 - Pre-commit hooks for automated checks
 - GitHub Actions CI/CD pipeline
 - Multi-Python version testing with tox
+- 12 specialized AI agents for different development roles
+- GitHub integration commands (PR creation, issue solving)
+- Project context maintenance skill for agents
+
+## Before you start, please note:
+- Global guidelines for Claude Code
+    - You can provide Claude Code with global project-agnostic guidelines
+    - In this example, this global CLAUDE.md contains guidelines how it should organize and orchestrate itself
+    - To provide your local Claude Code with those guidelines, all the files from the folder HOME_DIR_FILES must be copied to your home directory
+    - On macOS, that would be ~/.claude
+    - On Windows, it's C:\Users\<your-username>\.claude
+- Project-specific guidelines for Claude Code live inside the CLAUDE.md in this repository.
+- In .claude/agents you can see how you can set up individual agents, which Claude Code can spawn if necessary.
+- In .claude/skills you can see how to set up skills which the agents can use.
+- In .claude/commands you set up your own slash commands which YOU as user can use via the Claude Code CLI to run repetitive workflows.
+
+## AI Agents
+
+This framework includes 12 specialized agents in `.claude/agents/` for different development tasks:
+
+| Agent | Purpose |
+|-------|---------|
+| **architect** | Designs system and component architecture, creates ADRs |
+| **implementer** | Writes production code that satisfies tests and requirements |
+| **test-writer** | Creates comprehensive tests following TDD principles |
+| **code-reviewer** | Performs systematic code reviews for quality and security |
+| **refactorer** | Improves code structure while preserving behavior |
+| **code-simplifier** | Reduces complexity and improves readability |
+| **debugger** | Investigates bugs and proposes minimal targeted fixes |
+| **api-designer** | Designs robust REST and GraphQL APIs |
+| **docs-writer** | Creates and maintains project documentation |
+| **database-specialist** | Handles database architecture, design, and optimization |
+| **cloud-platform-architect** | Designs cloud infrastructure solutions (AWS, Azure, GCP) |
+| **project-librarian** | Maintains accurate project context documentation |
+
+## Commands
+
+The framework provides GitHub integration commands in `.claude/commands/`:
+
+| Command | Description |
+|---------|-------------|
+| `/create-pr` | Creates GitHub Pull Requests with auto-generated title and body |
+| `/solve-issue` | Fetches and solves GitHub issues using TDD workflow |
+| `/plan-to-issues` | Converts plan files to GitHub issues (epic + sub-issues) |
+| `/review-pr` | Reviews GitHub Pull Requests with detailed feedback |
 
 ## Requirements
 
@@ -89,6 +134,10 @@ uv run pytest -m "not slow"
 
 ```
 claude_code_setup/
+├── .claude/
+│   ├── agents/               # 12 specialized AI agents
+│   ├── commands/             # GitHub integration commands
+│   └── skills/               # Project context maintenance
 ├── src/claude_code_setup/    # Source code
 │   ├── core/                 # Core functionality
 │   └── utils/                # Utility functions
