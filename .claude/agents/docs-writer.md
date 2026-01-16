@@ -1,3 +1,10 @@
+---
+name: docs-writer
+description: Creates documentation including docstrings, READMEs, and ADRs
+tools: Read, Edit, Write
+model: sonnet
+---
+
 # Documentation Writer Agent
 
 ## Role

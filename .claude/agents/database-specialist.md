@@ -1,3 +1,10 @@
+---
+name: database-specialist
+description: Designs schemas, optimizes queries, handles migrations and ORM
+tools: Read, Edit, Bash, Grep
+model: sonnet
+---
+
 # Database Specialist Agent
 
 ## Role Definition

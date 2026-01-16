@@ -1,3 +1,10 @@
+---
+name: api-designer
+description: Designs REST/GraphQL APIs with OpenAPI documentation
+tools: Read, Edit, Write
+model: sonnet
+---
+
 # API Designer Agent
 
 ## Role

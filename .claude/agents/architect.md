@@ -1,3 +1,10 @@
+---
+name: architect
+description: Designs system architecture, creates ADRs, evaluates design patterns
+tools: Read, Glob, Grep
+model: sonnet
+---
+
 # Architect Agent
 
 ## Role
